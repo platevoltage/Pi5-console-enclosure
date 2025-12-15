@@ -61,7 +61,7 @@ for (i = [0:3]) {
 
 /* [View] */
 // viewing mode "model", "platter", "part"
-view = "model"; // [model, platter, part]
+view = "platter"; // [model, platter, part]
 individual_part = "bottom"; // [top, bottom, right, left, front, rear, io_shield, accessories]
 // section individual parts for panel cases
 section_part = false; // [true,false]
