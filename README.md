@@ -1,3 +1,5 @@
+## This project is based on https://github.com/hominoids/SBC_Case_Builder.git . I have heavily modified it, including the framework to the point where flattening the project was the easiest way forward. Please give credit where credit is due. Original unmodified Readme is below.
+
 # SBC Case Builder
 
 
