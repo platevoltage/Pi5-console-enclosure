@@ -61,7 +61,7 @@ for (i = [0:3]) {
 
 /* [View] */
 // viewing mode "model", "platter", "part"
-view = "platter"; // [model, platter, part]
+view = "model"; // [model, platter, part]
 individual_part = "bottom"; // [top, bottom, right, left, front, rear, io_shield, accessories]
 // section individual parts for panel cases
 section_part = false; // [true,false]
@@ -89,7 +89,7 @@ sbc_information = false;
 // enable highlight for sbc component subtractive geometry
 sbc_highlight = false;
 // enable highlight for accessory subtractive geometry
-accessory_highlight = false;
+accessory_highlight = true;
 // base case design
 case_design =
 "fitted"; // [shell,panel,panel_nas,stacked,tray,tray_sides,tray_vu5,tray_vu7,round,hex,snap,fitted,rack,paper_split-top,paper_full-top,adapter_ssi-eeb,adapter_ssi-ceb,adapter_atx,adapter_micro-atx,adapter_dtx,adapter_flex-atx,adapter_mini-dtx,adapter_mini-itx,adapter_mini-itx_thin,adapter_mini-stx,adapter_mini-stx_thin]
@@ -262,9 +262,9 @@ case_offset_x = 0; //[0:.01:300]
 // additional y axis case size
 case_offset_y = 4; //[0:.01:300]
 // additional z axis case top size
-case_offset_tz = 7; //[-50:.01:300]
+case_offset_tz = -2; //[-50:.01:300]
 // additional z axis case bottom size
-case_offset_bz = 0; //[-50:.01:300]
+case_offset_bz = 5; //[-50:.01:300]
 // case wall thickness
 wallthick = 3; //[1:.25:5]
 // case floor and ceiling thickness
@@ -331,7 +331,7 @@ hd_z_position = 40; // [0:300]
 
 // case accessory group to load
 accessory_name =
-"none"; // ["none", "hk_uart", "c4_shell_boombox", "c4_desktop_lcd3.5", "c4_deskboom_lcd3.5",
+"rpi5_m2hat"; // ["none", "hk_uart", "c4_shell_boombox", "c4_desktop_lcd3.5", "c4_deskboom_lcd3.5",
 // "c4_panel_boombox", "c4_panel_lcd3.5", "c4_tray_boombox", "c4_round", "c4_hex",
 // "c-series_rack19-1u", "xu4_shifter_shield", "xu4_keyhole", "hc4_panel_nas",
 // "hc4_shell_drivebox2.5", "hc4_shell_drivebox2.5v", "hc4_shell_drivebox3.5", "hc4_tray_drivebox2.5",
@@ -368,19 +368,19 @@ top_standoff_insert_height = 5.1; //.01
 /* [SBC Top Standoff Individual Settings] */
 // case top - lower left standoff settings
 top_rear_left_enable = true;
-top_rear_left_adjust = -15.65; //[-30:.01:30]
+top_rear_left_adjust = -0.65; //[-30:.01:30]
 top_rear_left_support = "rear"; //[none,left,rear,front,right]
 // case top - upper left standoff settings
 top_front_left_enable = true;
-top_front_left_adjust = -15.65; //[-30:.01:30]
+top_front_left_adjust = -0.65; //[-30:.01:30]
 top_front_left_support = "front"; //[none,left,rear,front,right]
 // case top - lower right standoff settings
 top_rear_right_enable = true;
-top_rear_right_adjust = -15.65; //[-30:.01:30]
+top_rear_right_adjust = -0.65; //[-30:.01:30]
 top_rear_right_support = "rear"; //[none,left,rear,front,right]
 // case top - upper right standoff settings
 top_front_right_enable = true;
-top_front_right_adjust = -15.65; //[-30:.01:30]
+top_front_right_adjust = -0.65; //[-30:.01:30]
 top_front_right_support = "front"; //[none,left,rear,front,right]
 
 /* [    Extended Case Top Standoffs] */
@@ -475,19 +475,19 @@ bottom_standoff_insert_height = 5.1; //.01
 /* [SBC Bottom Standoff Individual Settings] */
 // case bottom - rear left standoff settings
 bottom_rear_left_enable = true;
-bottom_rear_left_adjust = -1; //[-30:.01:30]
+bottom_rear_left_adjust = -8; //[-30:.01:30]
 bottom_rear_left_support = "rear"; //[none,left,rear,front,right]
 // case bottom - upper left standoff settings
 bottom_front_left_enable = true;
-bottom_front_left_adjust = -1; //[-30:.01:30]
+bottom_front_left_adjust = -8; //[-30:.01:30]
 bottom_front_left_support = "front"; //[none,left,rear,front,right]
 // case bottom - lower right standoff settings
 bottom_rear_right_enable = true;
-bottom_rear_right_adjust = -1; //[-30:.01:30]
+bottom_rear_right_adjust = -8; //[-30:.01:30]
 bottom_rear_right_support = "rear"; //[none,left,rear,front,right]
 // case bottom - upper right standoff settings
 bottom_front_right_enable = true;
-bottom_front_right_adjust = -1; //[-30:.01:30]
+bottom_front_right_adjust = -8; //[-30:.01:30]
 bottom_front_right_support = "front"; //[none,left,rear,front,right]
 
 /* [    Extended Case Bottom Standoffs] */

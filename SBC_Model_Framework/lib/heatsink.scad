@@ -2664,7 +2664,7 @@ module heatsink(type, loc_x, loc_y, loc_z, side, rotation, size, data, pcbsize_z
         if (side == "top" && rotation == 0) {
           place(loc_x, loc_y, loc_z - back, size_xm, size_ym, rotation, side, pcbsize_z)
             translate([(size_xm - size_x) / 2 + 1.5, -.75 - (size_ym - size_y) / 2, 14])
-              vent_hex_tapered(11, 5, 12, 9, .4, "horizontal", 3);
+              vent_hex_tapered(11, 5, 12, 9, .4, "horizontal", -6);
         }
       }
       if (mstyle == "custom") {

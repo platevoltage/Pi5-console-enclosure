@@ -500,7 +500,7 @@ module case_bottom(case_design) {
                 }
               }
               //Power Button
-              translate([0, 18.3, 12.3])
+              translate([0, 18.3, 17.3])
                 rotate([180, 90, 0])
                   union() {
                     linear_extrude(h=6) circle(r=2);
@@ -508,7 +508,7 @@ module case_bottom(case_design) {
                       linear_extrude(h=3) circle(r=3);
                   }
               //Power LED
-              translate([0, 12.8, 11])
+              translate([0, 12.8, 16])
                 rotate([180, 90, 0])
                   union() {
                     linear_extrude(h=8) circle(r=1);
