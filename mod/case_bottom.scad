@@ -1373,7 +1373,8 @@ module case_bottom(case_design) {
       }
     }
 
-    translate([34, -2, 6])
+    //HDMI 
+    translate([34, -2, 11])
       linear_extrude(h=10) square([10, 2]);
     // subtractive accessories
     if (accessory_name != "none") {

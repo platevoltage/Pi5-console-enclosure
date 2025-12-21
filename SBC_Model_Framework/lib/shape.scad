@@ -294,6 +294,11 @@ module vent_hex_tapered(cells_x, cells_y, thickness, cell_size, cell_spacing, or
         for (iy = [0:2:cells_y - 1]) {
           translate([(ix + ( (!flip && iy == 2) ? 1 : 0)) * xs, iy * ys, 0]) rotate([0, 0, 90])
               cylinder(r2=cell_size / sqrt(3) * (flip ? .5 : 1), r1=(cell_size / sqrt(3)) * (flip ? 1 : .5), h=thickness, $fn=6);
+          if (!flip) {
+            translate([( (ix + ( (!flip && iy == 2) ? 1 : 0)) + 1) * xs, iy * ys, 9])
+              rotate([0, 0, 90])
+                cylinder(r2=(cell_size) / sqrt(3) * (flip ? .9 : 1), r1=( (cell_size - 1) / sqrt(3)) * (flip ? 1 : .95), h=thickness, $fn=6);
+          }
         }
       }
       for (ix = [0:(cells_x / 2) - (flip ? 1 : 0)]) {
@@ -301,6 +306,11 @@ module vent_hex_tapered(cells_x, cells_y, thickness, cell_size, cell_spacing, or
           translate([(ix + 0.5) * xs, iy * ys, 0])
             rotate([0, 0, 90])
               cylinder(r2=cell_size / sqrt(3) * (flip ? .5 : 1), r1=(cell_size / sqrt(3)) * (flip ? 1 : .5), h=thickness, $fn=6);
+          if (!flip) {
+            translate([( (ix + 0.5) + 1) * xs, iy * ys, 9])
+              rotate([0, 0, 90])
+                cylinder(r2=(cell_size) / sqrt(3) * (flip ? .9 : 1), r1=( (cell_size - 1) / sqrt(3)) * (flip ? 1 : .95), h=thickness, $fn=6);
+          }
         }
       }
     }

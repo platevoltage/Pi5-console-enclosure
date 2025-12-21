@@ -37,31 +37,31 @@ translate([0, -12, 0])
 
 for (i = [0:3]) {
 
-  translate([10 + i * 5.2, -12, 0])
+  translate([10 + i * 5.5, -12, 0])
     difference() {
-      linear_extrude(h=15) circle(r=2.5);
-      linear_extrude(h=16) circle(r=1.4);
+      linear_extrude(h=6) circle(r=2.7);
+      linear_extrude(h=16) circle(r=1.6);
     }
   ;
 }
 
-for (i = [0:3]) {
+// for (i = [0:3]) {
 
-  translate([40 + i * 11, -12, 0])
-    difference() {
-      linear_extrude(h=5) offset(r=1) square([8, 8], center=true);
-      union() {
-        linear_extrude(h=6) circle(r=1.4);
-        translate([0, 0, 2])
-          linear_extrude(h=4) circle(r=2.5);
-      }
-    }
-  ;
-}
+//   translate([40 + i * 11, -12, 0])
+//     difference() {
+//       linear_extrude(h=5) offset(r=1) square([8, 8], center=true);
+//       union() {
+//         linear_extrude(h=6) circle(r=1.4);
+//         translate([0, 0, 2])
+//           linear_extrude(h=4) circle(r=2.5);
+//       }
+//     }
+//   ;
+// }
 
 /* [View] */
 // viewing mode "model", "platter", "part"
-view = "model"; // [model, platter, part]
+view = "platter"; // [model, platter, part]
 individual_part = "bottom"; // [top, bottom, right, left, front, rear, io_shield, accessories]
 // section individual parts for panel cases
 section_part = false; // [true,false]
@@ -368,19 +368,19 @@ top_standoff_insert_height = 5.1; //.01
 /* [SBC Top Standoff Individual Settings] */
 // case top - lower left standoff settings
 top_rear_left_enable = true;
-top_rear_left_adjust = -0.65; //[-30:.01:30]
+top_rear_left_adjust = -0; //[-30:.01:30]
 top_rear_left_support = "rear"; //[none,left,rear,front,right]
 // case top - upper left standoff settings
 top_front_left_enable = true;
-top_front_left_adjust = -0.65; //[-30:.01:30]
+top_front_left_adjust = -0; //[-30:.01:30]
 top_front_left_support = "front"; //[none,left,rear,front,right]
 // case top - lower right standoff settings
 top_rear_right_enable = true;
-top_rear_right_adjust = -0.65; //[-30:.01:30]
+top_rear_right_adjust = -0; //[-30:.01:30]
 top_rear_right_support = "rear"; //[none,left,rear,front,right]
 // case top - upper right standoff settings
 top_front_right_enable = true;
-top_front_right_adjust = -0.65; //[-30:.01:30]
+top_front_right_adjust = -0; //[-30:.01:30]
 top_front_right_support = "front"; //[none,left,rear,front,right]
 
 /* [    Extended Case Top Standoffs] */
@@ -462,7 +462,7 @@ bottom_standoff_reverse = false;
 // enable wall support for standoffs
 bottom_sidewall_support = false;
 bottom_standoff_size = "m3"; //[m2_tap, m2, m2+, m2.5_tap, m2.5, m2.5+, m3_tap, m3, m3+, m4_tap, m4, m4+, custom]
-bottom_standoff_type = "none"; //[none, countersunk, recessed, nut holder, blind]
+bottom_standoff_type = "countersunk"; //[none, countersunk, recessed, nut holder, blind]
 bottom_standoff_pillar = "round"; //[hex, round]
 bottom_standoff_diameter = 5.75; //[2:.01:10]
 bottom_standoff_hole_size = 3.4; //[0:.01:5]
